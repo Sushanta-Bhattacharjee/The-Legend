@@ -30,7 +30,6 @@ class Player
     void takeDamage(int damage)
     {
       cout<<"\nCritical hit to Player."<<endl;
-      //acout<<"\nEnemy is dealing damage of "<<damage<<" to the player."<<endl;
       health =health-damage;
       if(health<00)
       {
@@ -88,7 +87,6 @@ class Enemy
   void takeDamage(int damage)
   {
     cout<<"\nCritical hit to Enemy."<<endl;
-    //cout<<"\nPlayer is dealing damage of "<<damage<<" to the Enemy."<<endl;
     health =health-damage;
     if(health<0)
     {
@@ -170,16 +168,8 @@ int main() {
       if(userInput == 'S' ||userInput == 's')
       {
         Player playerObj;
-        //Testing Functions
-        //cout<<"\nPlayer Health : "<<playerObj.getHealth()<<endl;
-        //playerObj.takeDamage(50);
-        //playerObj.giveDamage();
-        //playerObj.heal();
         
         Enemy enemyObj;
-        //Testing Functions
-        //cout<<"\nEnemy Health : "<<enemyObj.getHealth()<<endl;
-        //enemyObj.giveDamage();
 
         gameLoop(playerObj, enemyObj);
       }
